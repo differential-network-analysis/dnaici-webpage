@@ -29,7 +29,7 @@ The README file provides instructions for analyzing `demo data <https://github.c
 Abstract figure:
 -----------------
 
-.. image:: Abstract_figure.png
+.. image:: Abstract_figure.pdf
 
 
 
