@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Enrichment and network analysis &#8212; Hi-C_paper 1.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=0f882399" />
+    <script src="../_static/documentation_options.js?v=292eb321"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Differential interacting nodes" href="Differential%20interacting%20nodes.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Differential%20interacting%20nodes.html" title="Differential interacting nodes"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Hi-C_paper 1.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Enrichment and network analysis</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="enrichment-and-network-analysis">
+<h1>Enrichment and network analysis<a class="headerlink" href="#enrichment-and-network-analysis" title="Link to this heading">¶</a></h1>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#diegs-enrichment" id="id2">1. diegs_enrichment</a></p>
+<ul>
+<li><p><a class="reference internal" href="#arguments" id="id3">Arguments</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#diegs-subnetwork" id="id4">2. diegs_subnetwork</a></p>
+<ul>
+<li><p><a class="reference internal" href="#id1" id="id5">Arguments</a></p></li>
+<li><p><a class="reference internal" href="#data-path" id="id6">Data path</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<section id="diegs-enrichment">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">1. diegs_enrichment</a><a class="headerlink" href="#diegs-enrichment" title="Link to this heading">¶</a></h2>
+<p>In this section, differentially interacting and expressed genes (DIEGs) need to be identified from the selected significant nodes. Gene enrichment analysis should be performed based on these DIEGs.
+.. code-block:: python</p>
+<blockquote>
+<div><p>dna.diegs_enrichment(cohort1, cohort2, method = ‘relativeRatio’, pval_cutoff = 0.05, fig_dpi = 300)</p>
+</div></blockquote>
+<section id="arguments">
+<h3><a class="toc-backref" href="#id3" role="doc-backlink">Arguments</a><a class="headerlink" href="#arguments" title="Link to this heading">¶</a></h3>
+<p><strong>Required arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cohort1</span></code>: Cohort 1 with all the above steps completed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cohort2</span></code>: Cohort 2 with all the above steps completed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">method</span></code>: Methods for selecting differentially expressed genes (‘relativeRatio’: relative ratio; ‘foldChange’: fold change). The default is ‘relativeRatio’.</p></li>
+</ul>
+<p><strong>Optional arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pval_cutoff</span></code>: P-value for screen for significant nodes in network_sigNodes. The default is 0.05.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">fig_dpi</span></code>: Figure resolution in dots per inch. The default is 300.</p></li>
+</ul>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>After obtaining DIEGs, users should go to DAVID website for gene enrichment analysis based on these DIEGs if they want to get figures of enrichment analysis.</p>
+</div>
+</section>
+</section>
+<section id="diegs-subnetwork">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">2. diegs_subnetwork</a><a class="headerlink" href="#diegs-subnetwork" title="Link to this heading">¶</a></h2>
+<p>Then, subnetworks based on the selected DIEGs and genomic information within each node can be obtained.
+.. code-block:: python</p>
+<blockquote>
+<div><p>dna.diegs_subnetwork(cohort1, cohort2, chromosome, pval_cutoff = 0.05)</p>
+</div></blockquote>
+<section id="id1">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Arguments</a><a class="headerlink" href="#id1" title="Link to this heading">¶</a></h3>
+<p><strong>Required arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cohort1</span></code>: Cohort 1 with all the above steps completed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cohort2</span></code>: Cohort 2 with all the above steps completed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chromosome</span></code>: Methods for selecting differentially expressed genes (‘relativeRatio’: relative ratio; ‘foldChange’: fold change). The default is ‘relativeRatio’.</p></li>
+</ul>
+<p><strong>Optional arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pval_cutoff</span></code>: P-value for screen for significant nodes in network_sigNodes. The default is 0.05.</p></li>
+</ul>
+</section>
+<section id="data-path">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Data path</a><a class="headerlink" href="#data-path" title="Link to this heading">¶</a></h3>
+<p><strong>output data path:</strong>
+The subnetworks, genomic features (histone markers of enhancer/repressor, gene expression) as well as gene names within each node are exported to <cite>/out_data_folder/differential_network_analysis</cite>.</p>
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Enrichment and network analysis</a><ul>
+<li><a class="reference internal" href="#diegs-enrichment">1. diegs_enrichment</a><ul>
+<li><a class="reference internal" href="#arguments">Arguments</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#diegs-subnetwork">2. diegs_subnetwork</a><ul>
+<li><a class="reference internal" href="#id1">Arguments</a></li>
+<li><a class="reference internal" href="#data-path">Data path</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Differential%20interacting%20nodes.html"
+                          title="previous chapter">Differential interacting nodes</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/content/Enrichment and network analysis.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Differential%20interacting%20nodes.html" title="Differential interacting nodes"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Hi-C_paper 1.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Enrichment and network analysis</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Gianna.Liu.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>
