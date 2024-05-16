@@ -26,11 +26,6 @@ DNAICI: Differential Network Analysis in Intra-chromosomal Community Interaction
 
 The README file provides instructions for analyzing `demo data <https://github.com/differential-network-analysis/dnaici/tree/master/demo>`_. The default values for parameters (e.g. `cohort = 'untreated'`, `chromosome = ['chr18','chr19']`) are designed for demo data. For more details about demo data, please refer to `[README.md] <https://github.com/differential-network-analysis/dnaici/blob/master/demo/README.md>`_.
 
-Abstract figure:
------------------
-
-.. image:: Abstract_figure.png
-
 
 
 Contents:
