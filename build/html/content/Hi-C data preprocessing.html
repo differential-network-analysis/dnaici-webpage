@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Hi-C data preprocessing &#8212; Hi-C_paper 1.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=649a27d8" />
+    <link rel="stylesheet" type="text/css" href="../_static/bizstyle.css?v=658d757c" />
+    
+    <script src="../_static/documentation_options.js?v=292eb321"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/bizstyle.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Installation" href="Installation.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <!--[if lt IE 9]>
+    <script src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Installation.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Hi-C_paper 1.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Hi-C data preprocessing</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="hi-c-data-preprocessing">
+<h1>Hi-C data preprocessing<a class="headerlink" href="#hi-c-data-preprocessing" title="Link to this heading">¶</a></h1>
+<p>The section is designed for data preprocessing of raw omics data.</p>
+<ol class="arabic simple">
+<li><p>Before preprocessing, we can first explore the parameter super resolution in HOMER.</p></li>
+</ol>
+<hr class="docutils" />
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>dna.estimate_resolution<span class="o">(</span>chromosome,<span class="w"> </span>cal_type,<span class="w"> </span>cohort1,<span class="w"> </span>cohort2,<span class="w"> </span><span class="nv">fig_dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="o">)</span>
+</pre></div>
+</div>
+<section id="arguments">
+<h2>Arguments<a class="headerlink" href="#arguments" title="Link to this heading">¶</a></h2>
+<p><strong>Required arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">chromosome</span></code>: The chromosome you want to investigate, i.e. [‘chr1’, ‘chr2’, …]. If you want to check all the chromosome, please use ‘whole_genome’. Whole genome estimation is recommended but time consuming.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cal_type</span></code>: the type of calculation, where 0: comparison between different resolution, 1: comparison between different super resolution with resolution equal to 50kb, 2: comparison between different super resolution with resolution equal to 100kb, 3: comparison between different super resolution with resolution equal to 500kb.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cohort1</span></code>: Cohort 1 with all the above steps completed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cohort2</span></code>: Cohort 2 with all the above steps completed.</p></li>
+</ul>
+<p><strong>Optional arguments:</strong>
+- <code class="docutils literal notranslate"><span class="pre">fig_dpi</span></code>: Figure resolution in dots per inch. The default is 300.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This step is not required.</p>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Next, applying HOMER to raw Hi-C data (HICUP) to filter and reorganize significant intra-chromosomal interactions.</p></li>
+</ol>
+<hr class="docutils" />
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>dna.preprocess_hic_tag2homer<span class="o">(</span>super_resolution,<span class="w"> </span><span class="nv">p_value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>.1,<span class="w"> </span><span class="nv">zscore</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span>.0<span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id1">
+<h2>Arguments<a class="headerlink" href="#id1" title="Link to this heading">¶</a></h2>
+<p><strong>Required arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">super_resolution</span></code>: The range of signal averaging. In the manual of HOMER, it is recommended that super resolution be the same as resolution.</p></li>
+</ul>
+<p><strong>Optional arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">p_value</span></code>: Cutoff for intra-chromosomal interactions. The default is 0.1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">zscore</span></code>: Cutoff for intra-chromosomal interactions. The default is 1.0.</p></li>
+</ul>
+</section>
+<section id="data-path">
+<h2>Data path<a class="headerlink" href="#data-path" title="Link to this heading">¶</a></h2>
+<p><strong>input data path:</strong>
+<cite>/in_data_folder/hic_data/hicup_processed/cohort</cite></p>
+<p><strong>output data path:</strong>
+<cite>/out_data_folder/hic_data/hic_interaction_homer</cite></p>
+<ol class="arabic simple" start="3">
+<li><p>Then, BEDTools is used to convert HOMER exported significant interactions to bed format files and Hi-C adjacency matrices are build with predefined resolution.</p></li>
+</ol>
+<hr class="docutils" />
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>dna.preprocess_hic_homer2bed<span class="o">(</span><span class="nv">genome_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;hg19&#39;</span>,<span class="w"> </span><span class="nv">fig_dpi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">300</span><span class="o">)</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h2>Arguments<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<p><strong>Required arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">genome_version</span></code>: Chromosome regions such as hg19, hg38. The default is ‘hg19’.</p></li>
+</ul>
+<p><strong>Optional arguments:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fig_dpi</span></code>: Figure resolution in dots per inch. The default is 300.</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2>Data path<a class="headerlink" href="#id3" title="Link to this heading">¶</a></h2>
+<p><strong>output data path:</strong>
+The output data including heatmap of interactions, are stored in <cite>/out_data_folder/hic_data/hic_interaction_bed</cite>.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Hi-C data preprocessing</a><ul>
+<li><a class="reference internal" href="#arguments">Arguments</a></li>
+<li><a class="reference internal" href="#id1">Arguments</a></li>
+<li><a class="reference internal" href="#data-path">Data path</a></li>
+<li><a class="reference internal" href="#id2">Arguments</a></li>
+<li><a class="reference internal" href="#id3">Data path</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="Installation.html"
+                          title="previous chapter">Installation</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/content/Hi-C data preprocessing.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Installation.html" title="Installation"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Hi-C_paper 1.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Hi-C data preprocessing</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Gianna.Liu.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>

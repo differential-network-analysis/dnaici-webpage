@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="../">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Installation &#8212; Hi-C_paper 1.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/nature.css?v=0f882399" />
+    <script src="../_static/documentation_options.js?v=292eb321"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hi-C data preprocessing" href="2_Hi-C_data%20preprocessing.html" />
+    <link rel="prev" title="Welcome to DNAICI’s documentation!" href="../index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="2_Hi-C_data%20preprocessing.html" title="Hi-C data preprocessing"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to DNAICI’s documentation!"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Hi-C_paper 1.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#download" id="id1">Download</a></p></li>
+<li><p><a class="reference internal" href="#install" id="id2">Install</a></p></li>
+<li><p><a class="reference internal" href="#requirements" id="id3">Requirements</a></p></li>
+<li><p><a class="reference internal" href="#package-installation" id="id4">Package Installation</a></p></li>
+<li><p><a class="reference internal" href="#arguments" id="id5">Arguments</a></p></li>
+<li><p><a class="reference internal" href="#package-contents" id="id6">Package Contents</a></p></li>
+</ul>
+</nav>
+<section id="download">
+<h2><a class="toc-backref" href="#id1" role="doc-backlink">Download</a><a class="headerlink" href="#download" title="Link to this heading">¶</a></h2>
+<p>Dnaici is written in Python. It can be installed and accessed from the command line and is available for both Linux and macOS operating systems. The package can be downloaded from the  <a class="reference external" href="https://github.com/EpiMapper-pipeline/code/tree/main/epimapper">EpiMapper GitHub page</a>. Alternatively, you can use the following command:</p>
+</section>
+<section id="install">
+<h2><a class="toc-backref" href="#id2" role="doc-backlink">Install</a><a class="headerlink" href="#install" title="Link to this heading">¶</a></h2>
+</section>
+<section id="requirements">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Requirements</a><a class="headerlink" href="#requirements" title="Link to this heading">¶</a></h2>
+<p>HOMER and Bedtools are required by data preprocessing. Java environment and ModularityOptimizer.jar are required by clustering algorithm.</p>
+</section>
+<section id="package-installation">
+<h2><a class="toc-backref" href="#id4" role="doc-backlink">Package Installation</a><a class="headerlink" href="#package-installation" title="Link to this heading">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">dnaici</span> <span class="kn">import</span> <span class="n">dnaici</span>
+<span class="n">dna</span> <span class="o">=</span> <span class="n">dnaici</span><span class="o">.</span><span class="n">DNAICI</span><span class="p">(</span><span class="n">in_data_folder</span><span class="p">,</span> <span class="n">out_data_folder</span><span class="p">,</span> <span class="n">cohort</span> <span class="o">=</span> <span class="s1">&#39;untreated&#39;</span><span class="p">,</span> <span class="n">chromosome</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;chr18&#39;</span><span class="p">,</span> <span class="s1">&#39;chr19&#39;</span><span class="p">],</span> <span class="n">resolution</span> <span class="o">=</span> <span class="mi">500000</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="arguments">
+<h2><a class="toc-backref" href="#id5" role="doc-backlink">Arguments</a><a class="headerlink" href="#arguments" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">in_data_folder</span></code>: Input data directory where Hi-C, gene expression, nucleosome density, histone marker, and chromosome regions hg19 are deposited.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">out_data_folder</span></code>: Output data directory where processed Hi-C, gene expression, nucleosome density, histone marker and other analysis results are deposited.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cohort</span></code>: The experimental condition for input data. The default is ‘untreated’, representing untreated MCF7 cell line. It can be changed to ‘tamr’ for demo data, or ‘t0’ and ‘t1’ for full data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chromosome</span></code>: List of chromosomes you want to investigate. The default is [‘chr18’, ‘chr19’]. If you want to get the complete results for 23 chromosomes, please let the input be ‘whole_genome’.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">resolution</span></code>: The resolution is used to divide the chromosome into equally sized window bin for analysis. The default is 500000, representing 500 kilobase pair.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Currently, DNAICI cannot be downloaded using pip install dnaici.</p>
+</div>
+</section>
+<section id="package-contents">
+<h2><a class="toc-backref" href="#id6" role="doc-backlink">Package Contents</a><a class="headerlink" href="#package-contents" title="Link to this heading">¶</a></h2>
+<p>The package folder will contain the following:</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Installation</a><ul>
+<li><a class="reference internal" href="#download">Download</a></li>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#requirements">Requirements</a></li>
+<li><a class="reference internal" href="#package-installation">Package Installation</a></li>
+<li><a class="reference internal" href="#arguments">Arguments</a></li>
+<li><a class="reference internal" href="#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../index.html"
+                          title="previous chapter">Welcome to DNAICI’s documentation!</a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="2_Hi-C_data%20preprocessing.html"
+                          title="next chapter">Hi-C data preprocessing</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/content/1_Installation.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="2_Hi-C_data%20preprocessing.html" title="Hi-C data preprocessing"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../index.html" title="Welcome to DNAICI’s documentation!"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Hi-C_paper 1.0.1 documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Installation</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+    &#169; Copyright 2024, Gianna.Liu.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
+    </div>
+  </body>
+</html>
