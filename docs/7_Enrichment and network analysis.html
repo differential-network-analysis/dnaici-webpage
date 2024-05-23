@@ -110,11 +110,10 @@
 </nav>
 <section id="diegs-enrichment">
 <h2><a class="toc-backref" href="#id2" role="doc-backlink">1. diegs_enrichment</a><a class="headerlink" href="#diegs-enrichment" title="Link to this heading"></a></h2>
-<p>In this section, differentially interacting and expressed genes (DIEGs) need to be identified from the selected significant nodes. Gene enrichment analysis should be performed based on these DIEGs.
-.. code-block:: python</p>
-<blockquote>
-<div><p>dna.diegs_enrichment(cohort1, cohort2, method = ‘relativeRatio’, pval_cutoff = 0.05, fig_dpi = 300)</p>
-</div></blockquote>
+<p>In this section, differentially interacting and expressed genes (DIEGs) need to be identified from the selected significant nodes. Gene enrichment analysis should be performed based on these DIEGs.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span><span class="o">.</span><span class="n">diegs_enrichment</span><span class="p">(</span><span class="n">cohort1</span><span class="p">,</span> <span class="n">cohort2</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span> <span class="s1">&#39;relativeRatio&#39;</span><span class="p">,</span> <span class="n">pval_cutoff</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">fig_dpi</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
 <section id="arguments">
 <h3><a class="toc-backref" href="#id3" role="doc-backlink">Arguments</a><a class="headerlink" href="#arguments" title="Link to this heading"></a></h3>
 <p><strong>Required arguments:</strong></p>
@@ -136,11 +135,10 @@
 </section>
 <section id="diegs-subnetwork">
 <h2><a class="toc-backref" href="#id4" role="doc-backlink">2. diegs_subnetwork</a><a class="headerlink" href="#diegs-subnetwork" title="Link to this heading"></a></h2>
-<p>Then, subnetworks based on the selected DIEGs and genomic information within each node can be obtained.
-.. code-block:: python</p>
-<blockquote>
-<div><p>dna.diegs_subnetwork(cohort1, cohort2, chromosome, pval_cutoff = 0.05)</p>
-</div></blockquote>
+<p>Then, subnetworks based on the selected DIEGs and genomic information within each node can be obtained.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span><span class="o">.</span><span class="n">diegs_subnetwork</span><span class="p">(</span><span class="n">cohort1</span><span class="p">,</span> <span class="n">cohort2</span><span class="p">,</span> <span class="n">chromosome</span><span class="p">,</span> <span class="n">pval_cutoff</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">)</span>
+</pre></div>
+</div>
 <section id="id1">
 <h3><a class="toc-backref" href="#id5" role="doc-backlink">Arguments</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <p><strong>Required arguments:</strong></p>

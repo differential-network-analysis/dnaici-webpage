@@ -7,6 +7,7 @@ Enrichment and network analysis
 1. diegs_enrichment
 ---------------------
 In this section, differentially interacting and expressed genes (DIEGs) need to be identified from the selected significant nodes. Gene enrichment analysis should be performed based on these DIEGs.
+
 .. code-block:: python
 
    dna.diegs_enrichment(cohort1, cohort2, method = 'relativeRatio', pval_cutoff = 0.05, fig_dpi = 300)
@@ -36,6 +37,7 @@ Arguments
 ------------------------------
 
 Then, subnetworks based on the selected DIEGs and genomic information within each node can be obtained.
+
 .. code-block:: python
 
    dna.diegs_subnetwork(cohort1, cohort2, chromosome, pval_cutoff = 0.05)
