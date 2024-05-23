@@ -18,7 +18,7 @@ Before preprocessing, we can first explore the parameter super resolution in HOM
 
 .. code-block:: python
 
-   dna.estimate_resolution(chromosome, cal_type, cohort1, cohort2, fig_dpi = 300)
+   dna.estimate_resolution(chromosome, cal_type, cohort1, cohort2 = "", fig_dpi = 300)
 
 Arguments
 ~~~~~~~~~
@@ -28,11 +28,12 @@ Arguments
 
 - ``cal_type``: the type of calculation, where 0: comparison between different resolution, 1: comparison between different super resolution with resolution equal to 50kb, 2: comparison between different super resolution with resolution equal to 100kb, 3: comparison between different super resolution with resolution equal to 500kb.
 
-- ``cohort1``: Cohort 1 with all the above steps completed.
+- ``cohort1``: The experimental condition for input data.
 
-- ``cohort2``: Cohort 2 with all the above steps completed.
 
 **Optional arguments:**
+
+- ``cohort2``: The additional experimental condition for input data if you want to compare with cohort1. The default is "".
 
 - ``fig_dpi``: Figure resolution in dots per inch. The default is 300.
 

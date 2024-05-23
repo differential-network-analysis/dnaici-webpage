@@ -145,11 +145,10 @@ The centrality for each node in the networks are deposited in <cite>/out_data_fo
 </section>
 <section id="network-signodes">
 <h2><a class="toc-backref" href="#id7" role="doc-backlink">2. network_sigNodes</a><a class="headerlink" href="#network-signodes" title="Link to this heading"></a></h2>
-<p>With the results of the above steps for two cohorts prepared, we can now start the differential network analysis! Firstly, nodes with differences in genomic and topological features between the networks of the two cohorts are identified.
-.. code-block:: python</p>
-<blockquote>
-<div><p>dna.network_sigNodes(cohort1, cohort2, chromosome, pval_cutoff = 0.05, permutation = 100, fig_dpi = 300)</p>
-</div></blockquote>
+<p>With the results of the above steps for two cohorts prepared, we can now start the differential network analysis! Firstly, nodes with differences in genomic and topological features between the networks of the two cohorts are identified.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span><span class="o">.</span><span class="n">network_sigNodes</span><span class="p">(</span><span class="n">cohort1</span><span class="p">,</span> <span class="n">cohort2</span><span class="p">,</span> <span class="n">chromosome</span><span class="p">,</span> <span class="n">pval_cutoff</span> <span class="o">=</span> <span class="mf">0.05</span><span class="p">,</span> <span class="n">permutation</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span> <span class="n">fig_dpi</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
 <section id="id1">
 <h3><a class="toc-backref" href="#id8" role="doc-backlink">Arguments</a><a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
 <p><strong>Required arguments:</strong></p>

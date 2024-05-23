@@ -31,6 +31,7 @@ The centrality for each node in the networks are deposited in `/out_data_folder/
 ------------------------------
 
 With the results of the above steps for two cohorts prepared, we can now start the differential network analysis! Firstly, nodes with differences in genomic and topological features between the networks of the two cohorts are identified.
+
 .. code-block:: python
 
    dna.network_sigNodes(cohort1, cohort2, chromosome, pval_cutoff = 0.05, permutation = 100, fig_dpi = 300)

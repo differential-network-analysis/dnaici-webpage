@@ -128,7 +128,7 @@
 <p class="admonition-title">Note</p>
 <p>This step is not required.</p>
 </div>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span><span class="o">.</span><span class="n">estimate_resolution</span><span class="p">(</span><span class="n">chromosome</span><span class="p">,</span> <span class="n">cal_type</span><span class="p">,</span> <span class="n">cohort1</span><span class="p">,</span> <span class="n">cohort2</span><span class="p">,</span> <span class="n">fig_dpi</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span><span class="o">.</span><span class="n">estimate_resolution</span><span class="p">(</span><span class="n">chromosome</span><span class="p">,</span> <span class="n">cal_type</span><span class="p">,</span> <span class="n">cohort1</span><span class="p">,</span> <span class="n">cohort2</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">fig_dpi</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
 </pre></div>
 </div>
 <section id="arguments">
@@ -137,11 +137,11 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">chromosome</span></code>: The chromosome you want to investigate, i.e. [‘chr1’, ‘chr2’, …]. If you want to check all the chromosome, please use ‘whole_genome’. Whole genome estimation is recommended but time consuming.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">cal_type</span></code>: the type of calculation, where 0: comparison between different resolution, 1: comparison between different super resolution with resolution equal to 50kb, 2: comparison between different super resolution with resolution equal to 100kb, 3: comparison between different super resolution with resolution equal to 500kb.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cohort1</span></code>: Cohort 1 with all the above steps completed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">cohort2</span></code>: Cohort 2 with all the above steps completed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cohort1</span></code>: The experimental condition for input data.</p></li>
 </ul>
 <p><strong>Optional arguments:</strong></p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cohort2</span></code>: The additional experimental condition for input data if you want to compare with cohort1. The default is “”.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">fig_dpi</span></code>: Figure resolution in dots per inch. The default is 300.</p></li>
 </ul>
 </section>
