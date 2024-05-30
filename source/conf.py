@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'DNAICI'
-copyright = '2024, Zhihao Yao & Junbai Wang.'
+copyright = '2024, Zhihao Yao & Junbai Wang'
 author = 'Gianna_Liu'
 
 release = '0.1'
