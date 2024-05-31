@@ -5,22 +5,17 @@ Installation
 .. contents::
     :local:
 
+
 Download
 ============
 
-Dnaici is written in Python. It can be installed and accessed from the command line and is available for both Linux and macOS operating systems. The package can be downloaded from the  `DNAICI GitHub page <https://github.com/differential-network-analysis/dnaici>`_. Alternatively, you can use the following command:
+Dnaici is written in Python and should be run in Python. The package can be downloaded from the  `DNAICI GitHub page <https://github.com/differential-network-analysis/dnaici>`_. Alternatively, you can use the following command:
 
 .. code-block:: bash
-
+    
     wget https://github.com/differential-network-analysis/dnaici.git
 
 Currently, DNAICI cannot be downloaded using pip install dnaici.
-
-
-Install
-============
-
-
 
 
 Requirements
@@ -28,13 +23,28 @@ Requirements
 
 HOMER and Bedtools are required by data preprocessing. Java environment and ModularityOptimizer.jar are required by clustering algorithm.
 
-Package Installation
+
+Initialize package
 ======================
+
+First change to the correct working directory in Python. It should be inside **dnaici-master/dnaici/**
 
 .. code-block:: python
 
-   from dnaici import dnaici
-   dna = dnaici.DNAICI(in_data_folder, out_data_folder, cohort = 'untreated', chromosome = ['chr18', 'chr19'], resolution = 500000)
+    import os   
+    os.chdir(path-to-dnaici)
+
+Then you can import dnaici successfully
+
+.. code-block:: python
+
+    from dnaici import dnaici
+    dna = dnaici.DNAICI(in_data_folder,
+                        out_data_folder, 
+                        cohort = 'untreated', 
+                        chromosome = ['chr18', 'chr19'], 
+                        resolution = 500000)
+
 
 
 Arguments
@@ -55,3 +65,17 @@ Arguments
 Package Contents
 ======================
 The package folder will contain the following:
+
+- ``demo``: The input demo data for users
+
+- ``dnaici``: The main program of DANICI
+
+- ``README.md``: Short guides to DANICI and demo
+
+
+Useful links
+===============
+
+`HOMER <http://homer.ucsd.edu/homer/index.html>`_
+
+`Bedtools <https://bedtools.readthedocs.io/en/latest/>`_
