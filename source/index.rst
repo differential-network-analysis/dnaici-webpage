@@ -21,7 +21,7 @@ DNAICI: Differential Network Analysis in Intra-chromosomal Community Interaction
 ================================================================================
 
 
-**DNAICI** is a Python package for Differential Network Analysis in Intra-chromosomal Community Interaction
+**DNAICI** is a Python package for differential network analysis in intra-chromosomal community interaction, which combines Hi-C data and epigenetic modifications to 
 
 
 The README file provides instructions for analyzing `demo data <https://github.com/differential-network-analysis/dnaici/tree/master/demo>`_. The default values for parameters (e.g. `cohort = 'untreated'`, `chromosome = ['chr18','chr19']`) are designed for demo data. For more details about demo data, please refer to `[README.md] <https://github.com/differential-network-analysis/dnaici/blob/master/demo/README.md>`_.
@@ -42,6 +42,24 @@ Contents:
    7_Enrichment and network analysis
    Supplementary Files
 
+
+
+Useful links
+====================
+
+- `DNAICI package <https://github.com/differential-network-analysis/dnaici>`_
+
+- `Demo data <https://github.com/differential-network-analysis/dnaici/tree/master/demo>`_
+
+- `Full data <https://drive.google.com/file/d/1YbdZ7y5bRNqbP_4hVt6rcZM2Om1PoA-b/view>`_
+
+- `Paper supplementary <>`_
+
+
+Citation
+==========
+
+Stay tuned...
 
 
 Other useful links
