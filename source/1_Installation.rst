@@ -73,13 +73,4 @@ The package folder will contain the following:
 - ``README.md``: Short guides to DANICI and demo
 
 
-Other useful links
-====================
-
-- `HOMER <http://homer.ucsd.edu/homer/index.html>`_
-
-- `Bedtools <https://bedtools.readthedocs.io/en/latest/>`_
-
-- `UCSC <https://genome.ucsc.edu/>`_
-
 
