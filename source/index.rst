@@ -29,7 +29,7 @@ The README file provides instructions for analyzing `demo data <https://github.c
 
 
 Contents:
----------
+=========
 .. toctree::
    :maxdepth: 1
 
@@ -43,6 +43,15 @@ Contents:
    Supplementary Files
 
 
+
+Other useful links
+====================
+
+- `HOMER <http://homer.ucsd.edu/homer/index.html>`_
+
+- `Bedtools <https://bedtools.readthedocs.io/en/latest/>`_
+
+- `UCSC <https://genome.ucsc.edu/>`_
 
 
 
