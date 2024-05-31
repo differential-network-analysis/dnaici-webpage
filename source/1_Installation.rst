@@ -8,10 +8,20 @@ Installation
 Download
 ============
 
-Dnaici is written in Python. It can be installed and accessed from the command line and is available for both Linux and macOS operating systems. The package can be downloaded from the  `EpiMapper GitHub page <https://github.com/EpiMapper-pipeline/code/tree/main/epimapper>`_. Alternatively, you can use the following command:
+Dnaici is written in Python. It can be installed and accessed from the command line and is available for both Linux and macOS operating systems. The package can be downloaded from the  `DNAICI GitHub page <https://github.com/differential-network-analysis/dnaici>`_. Alternatively, you can use the following command:
+
+.. code-block:: bash
+
+    wget https://github.com/differential-network-analysis/dnaici.git
+
+Currently, DNAICI cannot be downloaded using pip install dnaici.
+
 
 Install
 ============
+
+
+
 
 Requirements
 ============
@@ -30,19 +40,16 @@ Package Installation
 Arguments
 ==========
 
-- ``in_data_folder``: Input data directory where Hi-C, gene expression, nucleosome density, histone marker, and chromosome regions hg19 are deposited.
+- ``in_data_folder``: Input data directory where Hi-C, gene expression, nucleosome density, histone marker, genome index, and other necessary datasets are deposited.
 
-- ``out_data_folder``: Output data directory where processed Hi-C, gene expression, nucleosome density, histone marker and other analysis results are deposited.
+- ``out_data_folder``: Output data directory where you hope to store processed Hi-C, gene expression, nucleosome density, histone marker and other analysis results.
 
-- ``cohort``: The experimental condition for input data. The default is 'untreated', representing untreated MCF7 cell line. It can be changed to 'tamr' for demo data, or 't0' and 't1' for full data.
+- ``cohort``: The experimental condition for input data. The default is 'untreated', representing untreated MCF7 cell line. It can be changed to 'tamr', which represent tamoxifen-resistant MCF7 cell line for demo data, or 't0' and 't1' for full data. If you are using your own datasets, make sure the input is consistent with the name of your dataset, .
 
-- ``chromosome``: List of chromosomes you want to investigate. The default is ['chr18', 'chr19']. If you want to get the complete results for 23 chromosomes, please let the input be 'whole_genome'.
+- ``chromosome``: List of chromosomes you want to investigate. The default is ['chr18', 'chr19'], designed for demo data. If you want to get the complete results for 23 chromosomes, please let the input be 'whole_genome'.
 
-- ``resolution``: The resolution is used to divide the chromosome into equally sized window bin for analysis. The default is 500000, representing 500 kilobase pair.
+- ``resolution``: The resolution is used to divide the chromosome into equally sized window bin for analysis. The default is 500000, representing 500 kilobase pair. Due to the computational complexity, a relatively large input (e.g. 1000000 or 500000), which represent a low resolution, is recommended for the first round calculation.
 
-.. note::
-
-   Currently, DNAICI cannot be downloaded using pip install dnaici.
 
 
 Package Contents
