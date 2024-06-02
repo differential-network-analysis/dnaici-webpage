@@ -15,6 +15,12 @@
    :align: left
    :target: https://www.ahus.no/
 
+
+.. image:: logo_uio.png
+   :width: 150
+   :align: left
+   :target: https://www.ahus.no/
+
 |
 ================================================================================
 DNAICI: Differential Network Analysis in Intra-chromosomal Community Interaction
