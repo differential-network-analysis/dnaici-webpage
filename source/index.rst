@@ -59,7 +59,7 @@ Useful links
 
 - `Full data <https://drive.google.com/file/d/1YbdZ7y5bRNqbP_4hVt6rcZM2Om1PoA-b/view>`_
 
-- `Paper supplementary <>`_
+- :doc:`Supplementary Files`
 
 
 Citation
