@@ -3,25 +3,23 @@
    :align: left
    :target: https://www.helse-sorost.no/
 
-
 .. image:: logo_Oslo_universitetssykehus_OUS.png
    :width: 150
    :align: left
    :target: https://www.oslo-universitetssykehus.no/
-
 
 .. image:: logo_Akershus-universitetssykehus.png
    :width: 150
    :align: left
    :target: https://www.ahus.no/
 
-
 .. image:: logo_uio.png
-   :width: 150
+   :width: 105
    :align: left
-   :target: https://www.ahus.no/
+   :target: https://www.uio.no/
 
 |
+
 ================================================================================
 DNAICI: Differential Network Analysis in Intra-chromosomal Community Interaction
 ================================================================================
