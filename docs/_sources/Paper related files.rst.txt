@@ -1,4 +1,11 @@
-Supplementary Files
+Paper Link:
+-----------------
+Analysis of Differential Intra-chromosomal Community Interactions: a Case Study of Breast Cancer 
+
+Stay tuned…
+
+
+Supplementary files
 ---------------------
 Please click the following links to download the supplementary files:
 

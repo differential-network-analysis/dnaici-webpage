@@ -21,20 +21,20 @@ Currently, DNAICI cannot be downloaded using pip install dnaici.
 Requirements
 ============
 
-HOMER and Bedtools are required by data preprocessing. Java environment and ModularityOptimizer.jar are required by clustering algorithm.
+HOMER and Bedtools are required by data preprocessing. Java environment are required by clustering algorithm SLM (Smart Local Moving: ModularityOptimizer.jar).
 
 
 Initialize package
 ======================
 
-First change to the correct working directory in Python. It should be inside **dnaici-master/dnaici/**
+Change to the correct working directory in Python first. It should be inside **dnaici-master/dnaici/**
 
 .. code-block:: python
 
     import os   
     os.chdir(path-to-dnaici)
 
-Then you can import dnaici successfully
+Then dnaici could be imported successfully
 
 .. code-block:: python
 
