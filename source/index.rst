@@ -24,16 +24,15 @@
 DNAICI: Differential Network Analysis in Intra-chromosomal Community Interaction
 ================================================================================
 
+Introduction
+============
+The advancement of both sequencing technologies and computational approaches have revolutionized the field of three-dimensional (3D) chromatin architecture. In order to fully utilize the multi-omics data of 3D chromosomes and mine hidden biological information, we presented **D**ifferential **N**etwork **A**nalysis in **I**ntra-chromosomal **C**ommunity **I**nteraction (DNAICI)，a Python package that combines Hi-C data, epigenetic modifications, and topological features to predict differentially interacting and expressed genes.
 
-**DNAICI** is a Python package for differential network analysis in intra-chromosomal community interaction, which combines Hi-C data and epigenetic modifications to 
+This webpage provides instructions for integrative analysis of multi-omics data, from data preprocessing to downstream differential analysis. The default values for parameters used in this instructions are designed for demo data (e.g. `cohort = 'untreated'`, `chromosome = ['chr18','chr19']`), which includes multi-omics data of two chromosomes of from untreated tamoxifen-sensitive MCF7 cell line and one hour estrogen (E2)-treated MCF7 cell line. The full data including tamoxifen-resistant cell line MCF7TR were used to generate the results in our paper.
 
 
-The README file provides instructions for analyzing `demo data <https://github.com/differential-network-analysis/dnaici/tree/master/demo>`_. The default values for parameters (e.g. `cohort = 'untreated'`, `chromosome = ['chr18','chr19']`) are designed for demo data. For more details about demo data, please refer to `[README.md] <https://github.com/differential-network-analysis/dnaici/blob/master/demo/README.md>`_.
-
-
-
-Contents:
-=========
+Contents
+========
 .. toctree::
    :maxdepth: 1
 
@@ -44,12 +43,12 @@ Contents:
    5_Enrichment of genomic features
    6_Differential interacting nodes
    7_Enrichment and network analysis
-   Supplementary Files
+   Paper related files
 
 
 
-Useful links
-====================
+Useful links for DNAICI
+=======================
 
 - `DNAICI package <https://github.com/differential-network-analysis/dnaici>`_
 
@@ -57,13 +56,13 @@ Useful links
 
 - `Full data <https://drive.google.com/file/d/1YbdZ7y5bRNqbP_4hVt6rcZM2Om1PoA-b/view>`_
 
-- :doc:`Supplementary Files`
 
 
 Citation
 ==========
 
 Stay tuned...
+
 
 
 Other useful links
