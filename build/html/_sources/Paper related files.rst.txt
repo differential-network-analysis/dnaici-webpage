@@ -1,12 +1,15 @@
-Paper Link
+Paper related files
 -----------------
+
+Paper link
+=================
 Analysis of Differential Intra-chromosomal Community Interactions: a Case Study of Breast Cancer 
 
 Stay tuned…
 
 
 Supplementary files
----------------------
+====================
 Please click the following links to download the supplementary files:
 
 :download:`Supplementary File 1. <suppl.1.selected_diff_inter_nodes_pval_ls0.05.xlsx>` - Differential interacting nodes between MCF7 cells and tamoxifen-resistant MCF7TR cells at 50kb resolution.
