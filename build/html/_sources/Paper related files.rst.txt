@@ -1,4 +1,4 @@
-Paper Link:
+Paper Link
 -----------------
 Analysis of Differential Intra-chromosomal Community Interactions: a Case Study of Breast Cancer 
 
