@@ -98,11 +98,11 @@ Through this, a summary of interactions and modularity score of network clusteri
 4. cluster_super_network
 -------------------------
 
-Next, valid communities should be identified in all clusters. Hi-C interactions and other genomic features within each community need to be analyzed.
+Furthermore, a super network is constructed according to the clustering results, where the node size and the edge width indicate the community size and the number of community interactions.
 
 .. code-block:: python
 
-   dna.cluster_community_structure(minCluster_size = 20, fig_dpi = 300)
+   dna.cluster_super_network(minCluster_size = 20, fig_dpi = 300)
 
 
 Arguments
