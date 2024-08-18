@@ -28,7 +28,7 @@ Introduction
 ============
 The advancement of both sequencing technologies and computational approaches have revolutionized the field of three-dimensional (3D) chromatin architecture. In order to fully utilize the multi-omics data of 3D chromosomes and mine hidden biological information, we presented Differential  Network  Analysis in  Intra-chromosomal  Community  Interaction (DNAICI), a Python package that combines Hi-C data, epigenetic modifications, and topological features to predict differentially interacting and expressed genes.
 
-This webpage provides instructions for integrative analysis of multi-omics data, from data preprocessing to downstream differential analysis. The default values for parameters used in this instructions are designed for demo data (e.g. `cohort = 'untreated'`, `chromosome = ['chr18','chr19']`), which includes multi-omics data of two chromosomes from untreated tamoxifen-sensitive MCF7 cell line and one hour estrogen (E2)-treated MCF7 cell line. The full data including MCF7 and tamoxifen-resistant cell line MCF7TR were used to generate the results in our paper.
+This webpage provides instructions for integrative analysis of multi-omics data, from data preprocessing to downstream differential analysis. The default values for parameters used in this instructions are designed for demo data (e.g. `cohort = 'untreated'`, `chromosome = ['chr18','chr19']`, `resolution = 500000`), which includes multi-omics data of two chromosomes from untreated tamoxifen-sensitive MCF7 cell line and one hour estrogen (E2)-treated MCF7 cell line. The full data including MCF7 and tamoxifen-resistant cell line MCF7TR were used to generate the results in our paper.
 
 
 
