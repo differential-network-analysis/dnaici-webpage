@@ -207,8 +207,8 @@ Through this, a summary of interactions and modularity score of network clusteri
 </section>
 <section id="cluster-super-network">
 <h2><a class="toc-backref" href="#id14" role="doc-backlink">4. cluster_super_network</a><a class="headerlink" href="#cluster-super-network" title="Link to this heading"></a></h2>
-<p>Next, valid communities should be identified in all clusters. Hi-C interactions and other genomic features within each community need to be analyzed.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span><span class="o">.</span><span class="n">cluster_community_structure</span><span class="p">(</span><span class="n">minCluster_size</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">fig_dpi</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
+<p>Furthermore, a super network is constructed according to the clustering results, where the node size and the edge width indicate the community size and the number of community interactions.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">dna</span><span class="o">.</span><span class="n">cluster_super_network</span><span class="p">(</span><span class="n">minCluster_size</span> <span class="o">=</span> <span class="mi">20</span><span class="p">,</span> <span class="n">fig_dpi</span> <span class="o">=</span> <span class="mi">300</span><span class="p">)</span>
 </pre></div>
 </div>
 <section id="id4">
